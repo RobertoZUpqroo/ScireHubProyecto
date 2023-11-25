@@ -13,4 +13,3 @@ namespace ScireHub.Services.IServices
         public Task<Usuario> Editar(Usuario i);
     }
 }
-}

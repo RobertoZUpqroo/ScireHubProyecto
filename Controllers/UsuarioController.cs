@@ -21,3 +21,5 @@ namespace ScireHub.Controllers
             var response = await _usuarioServices.GetAll();
             return View(response);
         }
+    }
+}

@@ -1,4 +1,5 @@
-﻿using ScireHub.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using ScireHub.Context;
 using ScireHub.Models.Entities;
 using ScireHub.Services.IServices;
 
