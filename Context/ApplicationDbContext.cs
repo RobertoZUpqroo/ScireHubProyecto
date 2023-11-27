@@ -10,6 +10,8 @@ namespace ScireHub.Context
         { }
 
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Investigación> Investigaciones { get; set; }
+        public virtual DbSet<Rol> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -5,11 +5,11 @@ namespace ScireHub.Services.IServices
     public interface IUsuarioServices
     {
 
-        public Task<List<Usuario>> GetAll();
+        public Task<List<Usuario>> GetUsuarios();
+        public Task<Usuario> GetByIdUsuario(int id);
 
-        public Task<Usuario> GetbyId(int id);
-        public Task<Usuario> Crear(Usuario i);
-
-        public Task<Usuario> Editar(Usuario i);
+        public Task<Usuario> CrearUsuario(Usuario i);
+        public Task<Usuario> EditarUsuario(Usuario i);
+        public bool EliminarUsuario(int id);
     }
 }

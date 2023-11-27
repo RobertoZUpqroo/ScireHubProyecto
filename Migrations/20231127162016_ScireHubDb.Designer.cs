@@ -11,7 +11,7 @@ using ScireHub.Context;
 namespace ScireHub.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231125194556_ScireHubDb")]
+    [Migration("20231127162016_ScireHubDb")]
     partial class ScireHubDb
     {
         /// <inheritdoc />

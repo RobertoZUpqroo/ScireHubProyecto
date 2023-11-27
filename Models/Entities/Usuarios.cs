@@ -25,6 +25,10 @@ namespace ScireHub.Models.Entities
 
         [Required]
         public string Contraseña { get; set; }
+
+        [ForeignKey("Roles")]
+        public int? FkRol { get; set; }
+        public Rol Roles { get; set; }
     }
 }
 

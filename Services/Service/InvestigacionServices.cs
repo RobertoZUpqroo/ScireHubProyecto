@@ -6,23 +6,23 @@ using System.Data;
 
 namespace ScireHub.Services.Service
 {
-    public class UsuarioServices : IUsuarioServices
+    public class InvestigacionServices : IInvestigacionServices
     {
         private readonly ApplicationDbContext _context;
 
         //Constructor para usar las tablas de base de datos
-        public UsuarioServices(ApplicationDbContext context)
+        public InvestigacionServices(ApplicationDbContext context)
         {
             _context = context;
 
         }
 
-        public async Task<List<Usuario>> GetUsuarios()
+        public async Task<List<Investigación>> GetInvestigaciones()
         {
             try
             {
 
-                return await _context.Usuarios.ToListAsync();
+                return await _context.Investigaciones.ToListAsync();
 
             }
             catch (Exception ex)
@@ -32,13 +32,12 @@ namespace ScireHub.Services.Service
 
         }
 
-        public async Task<Usuario> GetByIdUsuario(int id)
+        public async Task<Investigación> GetByIdInvestigacion(int id)
         {
             try
             {
-                //Articulo response = await _context.Articulos.FindAsync(id);
 
-                Usuario response = await _context.Usuarios.FirstOrDefaultAsync(x => x.PKUsuario == id);
+                Investigación response = await _context.Investigaciones.FirstOrDefaultAsync(x => x.PkInvestigación == id);
                 return response;
             }
             catch (Exception ex)
@@ -47,21 +46,19 @@ namespace ScireHub.Services.Service
             }
 
         }
-        public async Task<Usuario> CrearUsuario(Usuario i)
+        public async Task<Investigación> SubirInvestigacion(Investigación i)
         {
             try
             {
-                Usuario request = new Usuario()
+                Investigación request = new Investigación()
                 {
                     Nombre = i.Nombre,
-                    Apellido1 = i.Apellido1,
-                    Apellido2 = i.Apellido2,
-                    NombreUsuario = i.NombreUsuario,
-                    Contraseña = i.Contraseña,
-                    FkRol = i.FkRol,
+                    Categoría = i.Categoría,
+                    Fecha = i.Fecha,
+                    FkAutor = i.FkAutor,
                 };
 
-                var result = await _context.Usuarios.AddAsync(request);
+                var result = await _context.Investigaciones.AddAsync(request);
                 _context.SaveChanges();
 
                 return request;
@@ -72,23 +69,21 @@ namespace ScireHub.Services.Service
             }
         }
 
-        public async Task<Usuario> EditarUsuario(Usuario i)
+        public async Task<Investigación> EditarInvestigacion(Investigación i)
         {
             try
             {
-                Usuario usuario = _context.Usuarios.Find(i.PKUsuario);
+                Investigación investigación = _context.Investigaciones.Find(i.PkInvestigación);
 
-                usuario.Nombre = i.Nombre;
-                usuario.Apellido1 = i.Apellido1;
-                usuario.Apellido2 = i.Apellido2;
-                usuario.NombreUsuario = i.NombreUsuario;
-                usuario.Contraseña = i.Contraseña;
-                usuario.FkRol = i.FkRol;
+                investigación.Nombre = i.Nombre;
+                investigación.Categoría = i.Categoría;
+                investigación.Fecha = i.Fecha;
+                investigación.FkAutor = i.FkAutor;
 
-                _context.Entry(usuario).State = EntityState.Modified;
+                _context.Entry(investigación).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
 
-                return usuario;
+                return investigación;
 
             }
             catch (Exception ex)
@@ -96,15 +91,15 @@ namespace ScireHub.Services.Service
                 throw new Exception("Succedio un error " + ex.Message);
             }
         }
-        public bool EliminarUsuario(int id)
+        public bool EliminarInvestigacion(int id)
         {
             try
             {
-                Usuario usuario = _context.Usuarios.Find(id);
+                Investigación investigación = _context.Investigaciones.Find(id);
 
-                if (usuario != null)
+                if (investigación != null)
                 {
-                    var res = _context.Usuarios.Remove(usuario);
+                    var res = _context.Investigaciones.Remove(investigación);
                     _context.SaveChanges();
                     return true;
                 }
