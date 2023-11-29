@@ -9,7 +9,7 @@ namespace ScireHub.Models.Entities
         public int PkInvestigación { get; set; }
         public string Nombre { get; set; }
         public string? Categoría { get; set; }
-        public DateOnly Fecha { get; set; }
+        public string Fecha { get; set; }
 
         [ForeignKey("Autores")]
         public int? FkAutor { get; set; }

@@ -1,3 +1,13 @@
+:root {
+    --azulbg: #0C2430;
+    --azulnavbar: #285568;
+    --negro: #010800;
+    --amarillo: #D98E04;
+    --azulclaro: #4C8CA5;
+    --azulverde: #559F9E;
+    --blanco: white;
+}
+
 html {
   font-size: 14px;
 }
@@ -19,4 +29,12 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.navbar-bg{
+    background-color: var(--azulbg);
+}
+
+.textoblanco, li{
+    color: var(--blanco);
 }
