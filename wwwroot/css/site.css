@@ -32,9 +32,56 @@ body {
 }
 
 .navbar-bg{
-    background-color: var(--azulbg);
+    background-color: var(--azulnavbar);
 }
 
-.textoblanco, li{
-    color: var(--blanco);
+.logo-nav{
+    margin-right: 515px;
+}
+
+.navbarcontenedor{
+    margin-left: 270px;
+    margin-right: 270px;
+}
+
+.botondecoration{
+    text-decoration: underline;
+}
+
+.botonregistrar {
+    border-radius: 25px;
+    background: #4C8CA5;
+}
+
+.10px{
+    padding: 10px
+}
+
+.herocontenedor {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 100%;
+    margin: 0;
+}
+
+.herocontenedor img{
+    height: 100%;
+    padding: 100%;
+    margin: 0;
+}
+
+.inicio{
+    width: 100%;
+    margin: 0, 0, 0, 0;
+    background-color: var(--azulbg);
+    padding: 0;
+}
+
+.marginbottom{
+    margin-bottom; 0;
+}
+
+.fondo{
+    background-color: var(--azulbg);
 }
