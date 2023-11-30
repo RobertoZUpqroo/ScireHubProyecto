@@ -85,3 +85,22 @@ body {
 .fondo{
     background-color: var(--azulbg);
 }
+
+.hero {
+    margin: 0;
+    height: 648px;
+    background-image: url('Img Hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+    .hero:before {
+        content: "";
+        width: 100%;
+        height: 648px;
+        top: 0;
+        left: 0;
+
+        background: linear-gradient(180deg, rgba(12, 36, 48, 0.00) 0%, #000 100%);
+    }
