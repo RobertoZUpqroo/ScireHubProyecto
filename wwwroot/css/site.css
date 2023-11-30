@@ -8,6 +8,15 @@
     --azulverde: #559F9E;
     --blanco: white;
 }
+h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 80px;
+    width: 750px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    padding-bottom: 30px;
+}
 
 html {
     font-size: 14px;
@@ -58,7 +67,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 8px;
+    padding: 9px;
 }
 
 .collapse a {
@@ -83,13 +92,8 @@ body {
 }
 
 /*utilidades*/
-.10px {
-    padding: 10px
-}
-
 .marginbottom {
-    margin-bottom;
-    0;
+    margin-bottom:0;
 }
 
 .margin-right {
@@ -108,112 +112,27 @@ body {
     background-color: var(--azulcard);
 }
 
+h2 {
+    color: #FFF;
+    text-align: justify;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 /*Hero*/
-/*
-.herocontenedor {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 100%;
-    margin: 0;
-}
 
-    .herocontenedor img {
-        height: 100%;
-        padding: 100%;
-        margin: 0;
-    }
-
-.inicio {
-    width: 100%;
-    margin: 0, 0, 0, 0;
+.container-body{
+    width: 100%; 
     background-color: var(--azulbg);
-    padding: 0;
-}
-
-.hero {
+    padding:0;
     margin: 0;
-    height: 648px;
-    background-image: url('Img Hero.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-
-    .hero:before {
-        content: "";
-        width: 100%;
-        height: 648px;
-        top: 0;
-        left: 0;
-        position: ;
-        background: linear-gradient(180deg, rgba(12, 36, 48, 0.00) 0%, #000 100%);
-    }
-    */
-
-/*Codigo Fabri HERO
-.contenedor-banner {
-    background-image: url('Img Hero.png');
-}
-.contenedor-item {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-    .contenedor-item:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(255,255,255,0), black);
-    }
-
-.banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 80%;
-}
-
-.atom-img,
-.banner-title {
-    position: absolute;
-    bottom: 5px;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-}
-
-.atom-img {
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.banner-title {
-    left: 50%;
-    transform: translateX(-50%);
-}
-    */
 
 .banner {
     width: 100%;
-    height: 668px;
+    height: 680px;
     margin:0;
     background: linear-gradient(180deg, rgba(12, 36, 48, 0.00) 0%, #000 100%), url('Img Hero.png');
     background-size: cover;
@@ -221,49 +140,112 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    padding:0;
 }
 
 .contenido {
     text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0; /* Eliminar el relleno si lo hubiera */
+    margin: 0; /* Eliminar los márgenes */
 }
 
 .icono {
-    width: 100px; /* Ajusta el tamaño del icono según sea necesario */
-    height: 100px;
+    width: 229px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 241px;
+    padding-bottom: 5px;
+    margin: 0; /* Eliminar los márgenes */
 }
+/*grid de carreras*/
 
-h1 {
-    color: #fff; /* Color del texto */
-    font-size: 2.5em; /* Tamaño del texto */
-    margin: 10px 0;
-}
-
-/*Cards*/
-
-.card{
-    max-height: 406px;
-    min-height: 406px;
-    max-width: 1075px;
-    min-width: 1075px;    
-}
-
-.imgcard{
-    max-height: 203px;
-    min-height: 203px;
-    max-width: 1075px;
-    min-width: 1075px;
-}
-
-.card-title{
-    position: absolute;
-    bottom: 5px;
-    color: #fff;
+.icons-container {
+    display: flex;
     justify-content: center;
     align-items: center;
+     margin-top: 90px;
+    margin-bottom: 64px;
+    flex-wrap: nowrap;
+}
+
+.icono-carrera {
+    text-align: center;
+    margin-bottom: 54px; /* Espacio entre elementos */
+    padding: 0 53px; /* Padding horizontal */
+}
+
+    .icono-carrera img {
+
+        max-width: 150px; /* Ajusta el tamaño del icono según lo necesites */
+    }
+
+.nombre-carrera {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: -1px; /* Ajusta el espacio entre el ícono y el nombre */
+    width: 168px;
+}
+/*Cards*/
+
+/* Estilos para la tarjeta */
+.card {
+    width: 100%;
+    height:406px;
+    max-width: 913px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azulcard);
+}
+
+.image {
+    position: relative;
+}
+
+    .image img {
+        width: 100%;
+        height: 204px;
+    }
+
+.title {
+    position: absolute;
+    bottom: 8px; /* Alinea el título hacia abajo */
+    left: 8px; /* Alinea el título hacia la izquierda */
+    z-index: 1;
+    color: white;
+    font-weight: 700;
+    margin-left:8px;
+    font-size: 24px;
+}
+
+.image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,0), black);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C323D;
+    color: white;
+    width: 897px;
+    margin-left: 8px;
+    margin-top: 52px;
+    margin-bottom: 52px;
+    font-size: 20px;
 }
 
 .contenedor-cards-footer{
-    margin-left: 279px;
-    margin-right: 279px;
+    margin-left: 280px;
+    margin-right: 280px;
 }
-
