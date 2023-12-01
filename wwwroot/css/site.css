@@ -192,7 +192,7 @@ h2 {
 .card {
     width: 100%;
     height:610px;
-    max-width: 947px;
+    max-width: 1240px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -200,6 +200,7 @@ h2 {
     flex-direction: column;
     background-color: var(--azulcard);
     margin-bottom: 32px;
+    margin-top: 4px;
 }
 
 .image {
@@ -239,7 +240,7 @@ h2 {
     justify-content: center;
     background-color: #1C323D;
     color: white;
-    width: 1140px;
+    width: 913px;
     margin-left: 8px;
     margin-top: 52px;
     margin-bottom: 52px;
@@ -394,4 +395,49 @@ input {
     color: black;
     width: 100%;
     font-size: 24px;
+}
+
+/*Footer*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--negro);
+    color: var(--blanco);
+    height:100px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-gap: 1px; /* Espacio entre los elementos */
+    color: var(--blanco);
+    font-size: 16px;
+    height: auto; /* Cambiado de 207px a auto */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.div1 {grid-area: 1 / 1 / 3 / 2;}
+.div2 {grid-area: 1 / 2 / 3 / 3;}
+.div3 {grid-area: 1 / 3 / 2 / 4;}
+.div4 {grid-area: 1 / 4 / 2 / 5;}
+.div5 {grid-area: 1 / 5 / 2 / 6;}
+.div6 {grid-area: 2 / 3 / 3 / 6;}
+
+.footer-container{
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Estilos adicionales para tu navbar */
 }
