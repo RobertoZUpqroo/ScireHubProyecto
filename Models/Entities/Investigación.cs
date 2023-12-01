@@ -14,5 +14,10 @@ namespace ScireHub.Models.Entities
         [ForeignKey("Autores")]
         public int? FkAutor { get; set; }
         public Usuario Autores { get; set; }
+
+        [NotMapped]
+        [Display(Name = "PDFArticulo")]
+        public IFormFile Pdf { get; set; }
+        public string UrlPdfPath { get; set; }
     }
 }

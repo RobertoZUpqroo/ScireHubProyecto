@@ -25,8 +25,8 @@ namespace ScireHub.Context
                     Apellido1 = "Fierro",
                     Apellido2 = "Ballote",
                     NombreUsuario = "robertofb",
-                    Contraseña = "robertojunio2004@gmail.com",
-                    Correo = "1234",
+                    Contraseña = "1234",
+                    Correo = "robertojunio2004@gmail.com",
                 });
         }
 

@@ -163,20 +163,20 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-     margin-top: 90px;
+     margin-top: 64px;
     margin-bottom: 64px;
     flex-wrap: nowrap;
 }
 
 .icono-carrera {
     text-align: center;
-    margin-bottom: 54px; /* Espacio entre elementos */
-    padding: 0 53px; /* Padding horizontal */
+    margin-bottom: 23px; /* Espacio entre elementos */
+    padding: 0 23px; /* Padding horizontal */
 }
 
     .icono-carrera img {
 
-        max-width: 150px; /* Ajusta el tamaño del icono según lo necesites */
+        max-width: 100px; /* Ajusta el tamaño del icono según lo necesites */
     }
 
 .nombre-carrera {
@@ -191,14 +191,15 @@ h2 {
 /* Estilos para la tarjeta */
 .card {
     width: 100%;
-    height:550px;
-    max-width: 1150px;
+    height:610px;
+    max-width: 947px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     background-color: var(--azulcard);
+    margin-bottom: 32px;
 }
 
 .image {
@@ -246,133 +247,7 @@ h2 {
 }
 
 .contenedor-cards-footer{
-    margin-left: 280px;
-    margin-right: 280px;
+    margin-left: 270px;
+    margin-right: 270px;
 
-}
-
-/*-----------------*/
-.fondo2 {
-    background: linear-gradient(180deg, #285568 54%, #16323E 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.contenedor-total2 {
-    display: flex;
-    width: calc(1376px + 48px); /* Suma de 688px + 688px */
-    height: 664px;
-    background-color: transparent;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.contenedor-logo2,
-.contenedor-login2 {
-    width: 688px;
-    height: 664px;
-    box-sizing: border-box;
-}
-
-.contenedor-logo2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-    .contenedor-logo2 img {
-        width: 461px;
-        height: 507px;
-    }
-
-.logo-text2 {
-    font-size: 96px; /* Tamaño ajustado */
-    color: #fff;
-    margin-top: 10px;
-}
-
-.contenedor-login2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 20px;
-    box-sizing: border-box;
-    background: transparent;
-    color: black;
-}
-
-.title2 {
-    color: black;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-item2 {
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-label {
-    color: black;
-    display: block;
-    margin-bottom: 8px;
-    align-items: center;
-    justify-content: center;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 5px;
-}
-
-.login-btn2 {
-    background-color: #D98E04;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-    .login-btn2:hover {
-        background-color: #035AA6;
-    }
-
-.forgot-password2 {
-    text-align: center;
-    margin-top: 20px;
-    color: #fff;
-}
-
-    .forgot-password2 a {
-        color: #3B5998;
-        text-decoration: underline;
-    }
-
-.separator-line2 {
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-.new-user2 {
-    text-align: center;
-    color: #fff;
-}
-
-.create-account2 {
-    color: #D98E04;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: underline;
 }

@@ -9,11 +9,15 @@ namespace ScireHub.Services.Service
     public class InvestigacionServices : IInvestigacionServices
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _webHost;
+        private readonly IHttpContextAccessor _httpContext;
 
         //Constructor para usar las tablas de base de datos
-        public InvestigacionServices(ApplicationDbContext context)
+        public InvestigacionServices(ApplicationDbContext context, IHttpContextAccessor httpContext, IWebHostEnvironment webHost)
         {
             _context = context;
+            _httpContext = httpContext;
+            _webHost = webHost;
 
         }
 
@@ -50,13 +54,19 @@ namespace ScireHub.Services.Service
         {
             try
             {
+                var urlPdf = i.Pdf.FileName;
+                i.UrlPdfPath = @"Pdf/usuarios/" + urlPdf;
+
                 Investigación request = new Investigación()
                 {
                     Nombre = i.Nombre,
                     Categoría = i.Categoría,
                     Fecha = i.Fecha,
+                    UrlPdfPath = i.UrlPdfPath,
                     FkAutor = i.FkAutor,
                 };
+
+                SubirPdf(urlPdf);
 
                 var result = await _context.Investigaciones.AddAsync(request);
                 _context.SaveChanges();
@@ -112,6 +122,44 @@ namespace ScireHub.Services.Service
             {
                 throw new Exception("Surgió un error: " + ex.Message);
             }
+        }
+        public bool SubirPdf(string Pdf)
+        {
+            bool res = false;
+
+            try
+            {
+                string rutaprincipal = _webHost.WebRootPath;
+                var archivos = _httpContext.HttpContext.Request.Form.Files;
+
+                if (archivos.Count > 0 && !string.IsNullOrEmpty(archivos[0].FileName))
+                {
+
+                    var nombreArchivo = Pdf;
+                    var subidas = Path.Combine(rutaprincipal, "Pdf", "investigacion");
+
+                    // Asegurarse de que el directorio de destino exista
+                    if (!Directory.Exists(subidas))
+                    {
+                        Directory.CreateDirectory(subidas);
+                    }
+
+                    var rutaCompleta = Path.Combine(subidas, nombreArchivo);
+
+                    using (var fileStream = new FileStream(rutaCompleta, FileMode.Create))
+                    {
+                        archivos[0].CopyTo(fileStream);
+                        res = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Error al subir el pdf: {ex.Message}");
+            }
+
+            return res;
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Azure;
 
 
 namespace ScireHub.Controllers
@@ -35,7 +36,7 @@ namespace ScireHub.Controllers
                 return View(await _investigacionServices.GetInvestigaciones());
 
                 /*var response = await _articuloServices.GetArticulos();
-                return View(response);*/
+               return View(response);*/
             }
             catch (Exception ex)
             {
@@ -48,9 +49,8 @@ namespace ScireHub.Controllers
         {
             return View();
         }
-
         [HttpPost]
-        public IActionResult Crear(Investigación request)
+        public IActionResult Crear([FromForm] Investigación request)
         {
             try
             {

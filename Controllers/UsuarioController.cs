@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using ScireHub.Context;
-using ScireHub.Models.Entities;
-using ScireHub.Services.IServices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-
+using ScireHub.Context;
+using ScireHub.Services.IServices;
+using ScireHub.Models.Entities;
 
 namespace ScireHub.Controllers
 {
@@ -34,7 +30,7 @@ namespace ScireHub.Controllers
 
                 return View(await _usuarioServices.GetUsuarios());
 
-                /*var response = await _articuloServices.GetArticulos();
+                /* var response = await _articuloServices.GetArticulos();
                 return View(response);*/
             }
             catch (Exception ex)
@@ -53,9 +49,8 @@ namespace ScireHub.Controllers
             });
             return View();
         }
-
         [HttpPost]
-        public IActionResult Crear(Usuario request)
+        public IActionResult Crear([FromForm] Usuario request)
         {
             try
             {

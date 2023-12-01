@@ -35,7 +35,8 @@ namespace ScireHub.Migrations
                     NombreUsuario = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Correo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Contraseña = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FkRol = table.Column<int>(type: "int", nullable: true)
+                    FkRol = table.Column<int>(type: "int", nullable: true),
+                    UrlImagenPath = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,7 +57,8 @@ namespace ScireHub.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Categoría = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Fecha = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FkAutor = table.Column<int>(type: "int", nullable: true)
+                    FkAutor = table.Column<int>(type: "int", nullable: true),
+                    UrlPdfPath = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,8 +72,8 @@ namespace ScireHub.Migrations
 
             migrationBuilder.InsertData(
                 table: "Usuarios",
-                columns: new[] { "PKUsuario", "Apellido1", "Apellido2", "Contraseña", "Correo", "FkRol", "Nombre", "NombreUsuario" },
-                values: new object[] { 1, "Fierro", "Ballote", "robertojunio2004@gmail.com", "1234", null, "Roberto", "robertofb" });
+                columns: new[] { "PKUsuario", "Apellido1", "Apellido2", "Contraseña", "Correo", "FkRol", "Nombre", "NombreUsuario", "UrlImagenPath" },
+                values: new object[] { 1, "Fierro", "Ballote", "1234", "robertojunio2004@gmail.com", null, "Roberto", "robertofb", null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Investigaciones_FkAutor",

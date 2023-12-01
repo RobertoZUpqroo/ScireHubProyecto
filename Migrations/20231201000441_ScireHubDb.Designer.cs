@@ -12,7 +12,7 @@ using ScireHub.Context;
 namespace ScireHub.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231129150223_ScireHubDb")]
+    [Migration("20231201000441_ScireHubDb")]
     partial class ScireHubDb
     {
         /// <inheritdoc />
@@ -44,6 +44,10 @@ namespace ScireHub.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UrlPdfPath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -106,6 +110,9 @@ namespace ScireHub.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UrlImagenPath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("PKUsuario");
 
                     b.HasIndex("FkRol");
@@ -118,8 +125,8 @@ namespace ScireHub.Migrations
                             PKUsuario = 1,
                             Apellido1 = "Fierro",
                             Apellido2 = "Ballote",
-                            Contraseña = "robertojunio2004@gmail.com",
-                            Correo = "1234",
+                            Contraseña = "1234",
+                            Correo = "robertojunio2004@gmail.com",
                             Nombre = "Roberto",
                             NombreUsuario = "robertofb"
                         });

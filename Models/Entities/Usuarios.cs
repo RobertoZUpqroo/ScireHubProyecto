@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using ScireHub.Models.Entities;
 
 namespace ScireHub.Models.Entities
 {
@@ -29,6 +30,10 @@ namespace ScireHub.Models.Entities
         [ForeignKey("Roles")]
         public int? FkRol { get; set; }
         public Rol Roles { get; set; }
+
+        [NotMapped]
+        [Display(Name = "FotoPerfil")]
+        public IFormFile Img { get; set; }
+        public string? UrlImagenPath { get; set; }
     }
 }
-
