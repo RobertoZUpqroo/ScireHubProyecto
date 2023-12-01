@@ -1,3 +1,70 @@
 ﻿@{
     ViewData["Title"] = "Registrate";
+    Layout = null;
 }
+    <link rel="stylesheet" href="~/css/Registrarse.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ScireHub.styles.css" asp-append-version="true" />
+
+<div class="fondo">
+    <div class="contenedor-total">
+        <div class="contenedor-logo">
+            <a asp-area ="" asp-controller="Home" asp-action="Index">
+                <img src="~/css/energia-atomica.png" alt="Logo">
+                <div class="logo-text">ScireHub</div>
+            </a>
+        </div>
+        <div class="contenedor-login">
+            <div class="title">Regístrate</div>
+            <div class="contenedor-img">
+                <img id="fotoperfil" src="~/css/person-circle.svg" alt="Foto de perfil">
+                <button type="button" class="custom-file-button">
+                    + Añadir foto
+                    <input id="inputImg" class="form-control" type="file" name="Img" accept="img/*" />
+                </button>
+            </div>
+            <div class="form-item">
+                <label for="username">Nombre</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label for="username">Apellido Paterno</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label for="username">Apellido Materno</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label for="username">Correo electronico</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="separator-line"></div>
+            <button class="create-btn">Crear cuenta</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('inputImg').addEventListener('change', function (event) {
+        const input = event.target;
+        const img = document.getElementById('fotoperfil');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                img.src = e.target.result;
+                img.style.borderRadius = '50%';
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    });
+</script>
