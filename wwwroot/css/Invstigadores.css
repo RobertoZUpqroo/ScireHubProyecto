@@ -1,0 +1,168 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0C2430;
+    position: relative;
+}
+
+.Contenedor-Principal {
+    display: flex;
+    flex-direction: column; /* Ajusta según sea necesario */
+    align-items: flex-start; /* Ajusta según sea necesario */
+    padding-left: 271px;
+    padding-right: 271px;
+    margin-top: 0%;
+    position: relative;
+    background-color: transparent;
+}
+
+.biotecnologia {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila */
+    justify-content: space-between; /* Ajusta según necesites, para centrar horizontalmente */
+}
+
+.terapia {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila */
+    justify-content: space-between; /* Ajusta según necesites, para centrar horizontalmente */
+}
+
+.software {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila */
+    justify-content: space-between; /* Ajusta según necesites, para centrar horizontalmente */
+}
+
+.finanzas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila */
+    justify-content: space-between; /* Ajusta según necesites, para centrar horizontalmente */
+}
+
+.biomedica {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila */
+    justify-content: space-between; /* Ajusta según necesites, para centrar horizontalmente */
+}
+
+.cards-invs {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila */
+    justify-content: space-between; /* Ajusta según necesites, para centrar horizontalmente */
+}
+
+.contenido-inv {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-inv {
+    flex-basis: calc(33.33% - 20px); /* Calcula el ancho de cada tarjeta con un margen entre ellas */
+    margin: 10px; /* Agregado un margen entre las tarjetas para mejorar la apariencia */
+    box-sizing: border-box; /* Incluye el margen en el tamaño total */
+    width: 438px;
+    height: 464px;
+    background-color: #1C323D;
+    color: #fff;
+    border-radius: 8%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    display: flex;
+    flex-direction: row; /* Asegúrate de que sea row para alinear en filas */
+    justify-content: center;
+    align-items: center;
+}
+
+#fotoperfil {
+    width: 219px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 206px;
+    border-radius: 50%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    margin-bottom: 10px;
+}
+
+.followdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que el contenido se expanda a lo ancho */
+}
+
+h5 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+    .follow img {
+        width: 24px; /* Ajusta según sea necesario */
+        height: 24px;
+    }
+
+
+h2 {
+    margin-top: 0%;
+    color: white;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcion-inv {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.contenedor-h3-button {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Ajusta según sea necesario */
+}
+
+.button-mas {
+    background-color: #1C323D;
+    color: white;
+    border: none;
+    border-radius: 15%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .button-mas:hover {
+        background-color: #D98E04;
+    }
+
+h3 {
+    font-size: 32px;
+    color: white;
+    margin: 0; /* Ajusta según sea necesario */
+}
+
+.followdiv {
+    border: none;
+    border-radius: 15%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.follow {
+    background-color: #1C323D;
+    color: white;
+    border: none;
+    border-radius: 15%;
+    font-size: 16px;
+    cursor:  pointer;
+}
