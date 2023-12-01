@@ -251,3 +251,147 @@ h2 {
     margin-right: 270px;
 
 }
+
+/*-------------Login--------------*/
+
+.fondo1 {
+    background: linear-gradient(180deg, #285568 54%, #16323E 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor-total {
+    display: flex;
+    width: 1376px + 48px; /* Suma de 688px + 688px */
+    height: 664px;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contenedor-logo1,
+.contenedor-login1 {
+    width: 688px;
+    height: 664px;
+    box-sizing: border-box;
+}
+
+.contenedor-logo1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+    .contenedor-logo1 img {
+        width: 461px;
+        height: 507px;
+    }
+
+a .logo-text1 {
+    font-size: 96px;
+    color: #fff;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.contenedor-login1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineado a la izquierda */
+    justify-content: space-between; /* Alineado al espacio entre los elementos */
+    padding: 20px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    border-radius: 2%;
+}
+
+.title1 {
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-item1 {
+    margin-bottom: 20px;
+    width: 100%; /* Ajuste para que el label ocupe todo el ancho */
+}
+
+label {
+    color: black;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #048ABF;
+    font-size: 24px;
+}
+
+.login-btn1 {
+    background-color: #D98E04;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 24px;
+}
+
+.create-btn1 {
+    background-color: #035AA6;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 24px;
+}
+
+    .login-btn1:hover,
+    .create-btn1:hover {
+        background-color: #035AA6;
+    }
+
+    .create-btn1:hover {
+        background-color: #D98E04;
+    }
+
+.forgot-password1 {
+    text-align: left;
+    margin-top: 20px;
+    color: #fff;
+}
+
+    .forgot-password1 a {
+        color: #3B5998;
+        text-decoration: underline;
+    }
+
+.separator-line1 {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.new-user1 {
+    text-align: center;
+    color: black;
+    width: 100%;
+    font-size: 24px;
+}
