@@ -1,14 +1,15 @@
-﻿@{
+﻿@model ScireHub.Models.Entities.Usuario
+@{
     ViewData["Title"] = "Registrate";
     Layout = null;
 }
-    <link rel="stylesheet" href="~/css/Registrarse.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ScireHub.styles.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Registrarse.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/ScireHub.styles.css" asp-append-version="true" />
 
 <div class="fondo">
     <div class="contenedor-total">
         <div class="contenedor-logo">
-            <a asp-area ="" asp-controller="Home" asp-action="Index">
+            <a asp-area="" asp-controller="Home" asp-action="Index">
                 <img src="~/css/energia-atomica.png" alt="Logo">
                 <div class="logo-text">ScireHub</div>
             </a>
@@ -22,30 +23,37 @@
                     <input id="inputImg" class="form-control" type="file" name="Img" accept="img/*" />
                 </button>
             </div>
+
             <div class="form-item">
-                <label for="username">Nombre</label>
-                <input type="text" id="username" name="username" required>
+                <label asp-for="Nombre"></label>
+                <input asp-for="Nombre" class="form-control" placeholder="Ingrese su nombre" required />
             </div>
+
             <div class="form-item">
-                <label for="username">Apellido Paterno</label>
-                <input type="text" id="username" name="username" required>
+                <label asp-for="Apellido1">Primer Apellido</label>
+                <input asp-for="Apellido1" class="form-control" placeholder="Ingrese su primer apellido" required />
             </div>
+
             <div class="form-item">
-                <label for="username">Apellido Materno</label>
-                <input type="text" id="username" name="username" required>
+                <label asp-for="Apellido2">Segundo Apellido</label>
+                <input asp-for="Apellido2" class="form-control" placeholder="Ingrese su segundo apellido" required />
             </div>
+
             <div class="form-item">
-                <label for="username">Usuario</label>
-                <input type="text" id="username" name="username" required>
+                <label asp-for="NombreUsuario">Nombre de Usuario</label>
+                <input asp-for="NombreUsuario" class="form-control" placeholder="Ingrese su nombre de usuario" required />
             </div>
+
             <div class="form-item">
-                <label for="username">Correo electronico</label>
-                <input type="text" id="username" name="username" required>
+                <label asp-for="Correo">Correo</label>
+                <input asp-for="Correo" class="form-control" type="email" placeholder="Ingrese su correo electrónico" required />
             </div>
+
             <div class="form-item">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
+                <label asp-for="Contraseña"></label>
+                <input asp-for="Contraseña" class="form-control" type="password" placeholder="Ingrese su contraseña" required />
             </div>
+
             <div class="separator-line"></div>
             <button class="create-btn">Crear cuenta</button>
         </div>

@@ -1,32 +1,35 @@
-﻿.fondo {
+﻿body{
+    margin: 0;
+}
+
+.fondo {
     background: linear-gradient(180deg, #285568 54%, #16323E 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .contenedor-total {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1900px;
-    height: 664px;
+    width: 1700px;
     background-color: transparent;
     border-radius: 10px;
-    overflow: hidden;
-    height: 60%;
+    overflow: visible;
+    height: 92%;
 }
 
 .contenedor-logo {
-    width: 800px;
-    height: 400px;
+    width: 600px;
+    height: 200px;
     box-sizing: border-box;
 }
 
 .contenedor-login {
     width: 1500px;
-    height: 100%;
+    height: 75%;
     box-sizing: border-box;
 }
 
@@ -34,17 +37,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 70px;
+    padding: 20px;
+    margin-top: 80px;
 }
 
     .contenedor-logo img {
         width: 550px;
         height: 507px;
     }
+    
+    .contenedor-logo a{
+        text-decoration: none;
+    }
 
 .contenedor-img img {
-    width: 461px;
-    height: 461px;
+    width: 410px;
+    height: 410px;
     border-radius: 25%;
 }
 
@@ -52,12 +60,14 @@
     font-size: 96px;
     color: #fff;
     margin-top: 10px;
-    width:500px;
+    width: 500px;
     text-align: center;
+    
 }
-a .logo-text {
-    text-decoration:none;
-}
+
+    .logo-text a {
+        text-decoration: none;
+    }
 
 .contenedor-login {
     position: relative; /* Agregamos posición relativa al contenedor-login */
@@ -78,7 +88,7 @@ a .logo-text {
     width: 40%; /* Puedes ajustar este valor según tus necesidades */
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center; /* Alinea los elementos a la derecha */
     padding: 20px;
 }
 
@@ -146,14 +156,14 @@ input {
 }
 
 .custom-file-button {
-    border-radius: 20px; / o ajusta según tus preferencias */
+    border-radius: 20px; /* o ajusta según tus preferencias */
     top: 20px;
     display: inline-block;
     position: relative;
     overflow: hidden;
     width: 440px;
     height: 70px;
-    font-size: 50px;
+    font-size: 30px;
     background-color: #048ABF;
     color: white;
 }
@@ -169,4 +179,7 @@ input {
     top: 0;
     opacity: 0;
     cursor: pointer;
+}
+::placeholder {
+    color: #ffffffc2;
 }

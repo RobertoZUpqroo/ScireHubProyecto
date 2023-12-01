@@ -8,6 +8,7 @@
     --azulverde: #559F9E;
     --blanco: white;
 }
+
 h1 {
     font-size: 64px;
     font-weight: 900;
@@ -35,10 +36,6 @@ html {
 html {
     position: relative;
     min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px;
 }
 
 /*Barra de navegación*/
@@ -240,7 +237,7 @@ h2 {
     justify-content: center;
     background-color: #1C323D;
     color: white;
-    width: 913px;
+    width: 1150px;
     margin-left: 8px;
     margin-top: 52px;
     margin-bottom: 52px;
@@ -260,16 +257,16 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .contenedor-total {
     display: flex;
     width: 1376px + 48px; /* Suma de 688px + 688px */
-    height: 664px;
+    height: 75%;
     background-color: transparent;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .contenedor-logo1,
@@ -291,11 +288,16 @@ h2 {
         height: 507px;
     }
 
+    .contenedor-logo1 a{
+        text-decoration: none;
+    }
+
 a .logo-text1 {
     font-size: 96px;
     color: #fff;
     margin-top: 10px;
     text-decoration: none;
+    text-align: center;
 }
 
 .contenedor-login1 {
@@ -440,4 +442,8 @@ input {
     width: 100%;
     z-index: 1000;
     /* Estilos adicionales para tu navbar */
+}
+
+::placeholder {
+    color: #ffffffc2;
 }
