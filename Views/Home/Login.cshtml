@@ -3,37 +3,25 @@
     Layout = null;
 }
 
-<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-<link rel="stylesheet" href="~/ScireHub.styles.css" asp-append-version="true"/>
+    <link rel="" href="~/js/Login.js" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+        <div class="login">
+        <a asp-area="" asp-controller="Home" asp-action="Index"><img class="logo-login" src="~/css/energia-atomica.png" alt=""><h1>ScireHub</h1></a>
 
-<div class="fondo1">
-    <div class="contenedor-total">
-        <div class="contenedor-logo1">
-            <a class="" asp-area ="" asp-controller="Home" asp-action="Index">
-                <img src="~/css/energia-atomica.png" alt="Logo">
-                <div class="logo-text1">ScireHub</div>
-            </a>
-        </div>
-        <div class="contenedor-login1">
-            <div class="title1">Iniciar sesión</div>
-            <div class="form-item1">
-                <label for="username1">Correo o usuario</label>
-                <input type="text" id="username1" name="username1" required>
-            </div>
-            <div class="form-item1">
-                <label for="password1">Contraseña</label>
-                <input type="password" id="password1" name="password1" required>
-            </div>
-            <div class="forgot-password1">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
-            <button class="login-btn1"  asp-area="" asp-controller="Home" asp-action="Miperfil">Iniciar sesión</button>
-            <div class="separator-line1"></div>
-            <div class="new-user1">
-                <p>¿Eres nuevo?</p>
-                <button class="create-btn1">Crear una cuenta</button>
-            </div>
-        </div>
+        <form method="post">
+            <table>
+                <tr>
+                    <th>
+                        <input type="text" name="u" placeholder="Correo o Ususario" required="required" />
+                    </th>
+                    <th> <input type="password" name="p" placeholder="Contraseña" required="required" /> </th>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+            <a class="olvido" href="#">¿Olvidaste tu contraseña?</a>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Iniciar sesión </button>
+            <h5 class="nuevo">¿Eres nuevo?</h5>
+            <button type="submit" class="btn btn-primary btn-block btn-large btn-crear-cuenta">Crear cuenta</button>
+        </form>
     </div>
-</div>

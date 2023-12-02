@@ -1,78 +1,34 @@
-﻿@model ScireHub.Models.Entities.Usuario
-@{
-    ViewData["Title"] = "Registrate";
+﻿@{
+    ViewData["Title"] = "Login";
     Layout = null;
 }
+
 <link rel="stylesheet" href="~/css/Registrarse.css" asp-append-version="true" />
-<link rel="stylesheet" href="~/ScireHub.styles.css" asp-append-version="true" />
+<link rel="" href="~/js/Registrate.js" asp-append-version="true" />
 
-<div class="fondo">
-    <div class="contenedor-total">
-        <div class="contenedor-logo">
-            <a asp-area="" asp-controller="Home" asp-action="Index">
-                <img src="~/css/energia-atomica.png" alt="Logo">
-                <div class="logo-text">ScireHub</div>
-            </a>
-        </div>
-        <div class="contenedor-login">
-            <div class="title">Regístrate</div>
-            <div class="contenedor-img">
-                <img id="fotoperfil" src="~/css/person-circle.svg" alt="Foto de perfil">
-                <button type="button" class="custom-file-button">
-                    + Añadir foto
-                    <input id="inputImg" class="form-control" type="file" name="Img" accept="img/*" />
-                </button>
-            </div>
+<div class="login">
+    <a asp-area="" asp-controller="Home" asp-action="Index"><img class="logo-login" src="~/css/energia-atomica.png" alt=""><h1>ScireHub</h1></a>
 
-            <div class="form-item">
-                <label asp-for="Nombre"></label>
-                <input asp-for="Nombre" class="form-control" placeholder="Ingrese su nombre" required />
-            </div>
-
-            <div class="form-item">
-                <label asp-for="Apellido1">Primer Apellido</label>
-                <input asp-for="Apellido1" class="form-control" placeholder="Ingrese su primer apellido" required />
-            </div>
-
-            <div class="form-item">
-                <label asp-for="Apellido2">Segundo Apellido</label>
-                <input asp-for="Apellido2" class="form-control" placeholder="Ingrese su segundo apellido" required />
-            </div>
-
-            <div class="form-item">
-                <label asp-for="NombreUsuario">Nombre de Usuario</label>
-                <input asp-for="NombreUsuario" class="form-control" placeholder="Ingrese su nombre de usuario" required />
-            </div>
-
-            <div class="form-item">
-                <label asp-for="Correo">Correo</label>
-                <input asp-for="Correo" class="form-control" type="email" placeholder="Ingrese su correo electrónico" required />
-            </div>
-
-            <div class="form-item">
-                <label asp-for="Contraseña"></label>
-                <input asp-for="Contraseña" class="form-control" type="password" placeholder="Ingrese su contraseña" required />
-            </div>
-
-            <div class="separator-line"></div>
-            <button class="create-btn">Crear cuenta</button>
-        </div>
-    </div>
+    <form method="post">
+        <table>
+            <tr>
+                <th>
+                    <input type="email" name="u" placeholder="Correo electronico" required="required" />
+                </th>
+                <th> <input type="text" name="p" placeholder="Nombre" required="required" /> </th>
+            </tr>
+            <tr>
+                <th> <input type="text" name="p" placeholder="Apellido Paterno" required="required" /> </th>
+                <th> <input type="text" name="p" placeholder="Apellido Materno" required="required" /> </th>
+            </tr>
+            <tr>
+                <th> <input type="text" name="p" placeholder="Usuario" required="required" /> </th>
+                <th> <input type="password" name="p" placeholder="Contraseña" required="required" /> </th>
+            </tr>
+        </table>
+        <a class="yatengocuenta" href="#">¿Ya tienes una cuenta?</a>
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+            Crear cuenta
+        </button>
+    </form>
 </div>
-<script>
-    document.getElementById('inputImg').addEventListener('change', function (event) {
-        const input = event.target;
-        const img = document.getElementById('fotoperfil');
-
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-                img.src = e.target.result;
-                img.style.borderRadius = '50%';
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    });
-</script>
